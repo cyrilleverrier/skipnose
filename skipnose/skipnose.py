@@ -63,7 +63,7 @@ class SkipNose(Plugin):
         ))
 
         parser.add_option(
-            '--with-skipnose',
+            str('--with-skipnose'),
             action='store_true',
             default=skipnose_on,
             dest='skipnose',
@@ -72,14 +72,14 @@ class SkipNose(Plugin):
                  ''.format(env=self.env_opt)
         )
         parser.add_option(
-            '--skipnose-debug',
+            str('--skipnose-debug'),
             action='store_true',
             default=False,
             dest='skipnose_debug',
             help='skipnose: enable debugging print-outs'
         )
         parser.add_option(
-            '--skipnose-include',
+            str('--skipnose-include'),
             action='append',
             default=skip_include,
             dest='skipnose_include',
@@ -92,7 +92,7 @@ class SkipNose(Plugin):
                  ''.format(env=self.env_include_opt)
         )
         parser.add_option(
-            '--skipnose-exclude',
+            str('--skipnose-exclude'),
             action='append',
             default=skip_exclude,
             dest='skipnose_exclude',
@@ -103,7 +103,7 @@ class SkipNose(Plugin):
                  ''.format(env=self.env_exclude_opt)
         )
         parser.add_option(
-            '--skipnose-skip-tests',
+            str('--skipnose-skip-tests'),
             action='store',
             dest='skipnose_skip_tests',
             help='skipnose: path to a json file which should contain '
